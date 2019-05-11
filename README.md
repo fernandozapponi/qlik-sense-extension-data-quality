@@ -1,0 +1,1 @@
+# qlik-sense-extension-data-quality
