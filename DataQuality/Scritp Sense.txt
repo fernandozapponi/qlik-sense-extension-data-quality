@@ -1,0 +1,23 @@
+if vQualify = 1 then
+	Qualify *;
+	Trace Qualify Habilitado;
+else
+	Trace Qualify Desabilitado;
+end if
+
+LOAD
+    *
+FROM 
+	[lib://Dados/*.QVD] (qvd);
+
+
+LOAD
+    Tabela,
+    "Ordem campo",
+    Campo
+FROM [lib://Dados/Metadados*.xlsx]
+(ooxml, embedded labels, table is Sheet1);
+
+
+
+Exit Script;
